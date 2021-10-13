@@ -12,7 +12,7 @@ const Checkout = (props) => {
     return sum;
   };
 
-  const remove = product => () => {
+  const remove = (product) => () => {
     props.removeFromCart(product);
   };
 
@@ -20,7 +20,7 @@ const Checkout = (props) => {
     <div className="Checkout">
       <div className="Checkout-content">
         {cart.length > 0 ? <h3>Lista de Pedidos:</h3> : <h2>Sin Pedidos</h2>}
-        {cart.map(item => (
+        {cart.map((item) => (
           <div className="Checkout-item" key={item.title}>
             <div className="Checkout-element">
               <h4>{item.title}</h4>
